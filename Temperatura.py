@@ -25,7 +25,7 @@ def user_input_features():
   return features
 
 df = user_input_features()
-datos =  pd.read_csv('Temperatura.csv', encoding='latin-1')
+datos =  pd.read_csv('Temperatura.csv', encoding='latin1')
 X = datos.drop(columns='AverageTemperature')
 y = datos['AverageTemperature']
 
