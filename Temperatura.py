@@ -4,13 +4,15 @@ import pandas as pd
 from sklearn import datasets
 from sklearn.tree import DecisionTreeClassifier
 
-st.write(''' # Predicción de temperatura ''')
+
+st.write(''' # Predicción de Temperatura ''')
 st.image("Temperatura.jpg", caption="Vamos a intentar predecir la temperatura.")
 
 st.header('Datos de evaluación')
 
 def user_input_features():
-  City = st.number_input('Ciudad (0 = Acapulco, 1 = Acuña, 2 = Aguascalientes):', min_value=0.0, max_value=2.0, value = 0.0, step = 1.0)
+  # Entrada
+  City = st.number_input('Ciudad (0 = Acapulco, 1 = Acuña, 2 = Aguascalientes):', min_value=0.0, max_value=1000000.0, value = 0.0, step = 1.0)
   Year = st.number_input('Año:', min_value=0.0, max_value=100000.0, value = 0.0, step = 1.0)
   Month = st.number_input('Mes:', min_value=0.0, max_value=100.0, value = 0.0, step = 1.0)
 
@@ -35,7 +37,7 @@ LR.fit(X_train,y_train)
 
 b1 = LR.coef_
 b0 = LR.intercept_
-prediccion = b0 + b1[0]*df['City'] + b1[1]*df['Year'] + b1[2]*df['Month']
+prediccion = b0 + b1[0]*df['Ciudad (0 = Acapulco, 1 = Acuña, 2 = Aguascalientes)'] + b1[1]*df['Año'] + b1[2]*df['Mes'] 
 
 st.subheader('Calculo de Temperatura')
 st.write('La temperatura será: ', prediccion)
