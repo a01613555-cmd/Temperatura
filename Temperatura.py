@@ -33,7 +33,7 @@ from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.30, random_state=1613555)
 from sklearn.linear_model import LinearRegression
 LR = LinearRegression()
-LR.fit(X_train, y_train)
+LR.fit(X_train,y_train)
 
 b1 = LR.coef_
 b0 = LR.intercept_
