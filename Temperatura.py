@@ -6,7 +6,7 @@ from sklearn.tree import DecisionTreeClassifier
 
 
 st.write(''' # Predicción de temperatura ''')
-st.image("Temperatura.jpeg", caption="Vamos a intentar predecir la temperatura.")
+st.image("Temperatura.jpg", caption="Vamos a intentar predecir la temperatura.")
 
 st.header('Datos de evaluación')
 
