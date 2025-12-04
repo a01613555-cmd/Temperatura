@@ -1,8 +1,7 @@
-import numpy as np
-import streamlit as st
 import pandas as pd
-from sklearn import datasets
-from sklearn.tree import DecisionTreeClassifier
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 
 st.write(''' # Predicción de temperatura ''')
@@ -31,6 +30,7 @@ y = datos['AverageTemperature']
 
 from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.30, random_state=1613555)
+
 from sklearn.linear_model import LinearRegression
 LR = LinearRegression()
 LR.fit(X_train,y_train)
